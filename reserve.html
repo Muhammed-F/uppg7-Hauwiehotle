@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+
+<head>
+    <title>Hauwie Reserve</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Creater: Muhammed Faisal,
+    Illustrator: Hauiwe hotel for a luxurious time">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script>
+        function showMessage() {
+            alert("Du har bokat i Hauwie Hauwie :) ");
+        }
+        window.onload = function () {
+            var images = document.querySelectorAll('.slideshow img');
+            var current = 0;
+            images[current].classList.add('active');
+            setInterval(function () {
+                images[current].classList.remove('active');
+                current = (current + 1) % images.length;
+                images[current].classList.add('active');
+            }, 4000);
+        };
+    </script>
+</head>
+
+<body>
+    <div class="slideshow">
+        <img src="imge/reserv3.webp" alt="Image 1">
+        <img src="imge/reservation4.webp" alt="Image 2">
+
+    </div>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="find.html">Find</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="reserve">
+                <h2>Make a Reservation</h2>
+                <form onsubmit="showMessage(); reset(); return flase;">
+                    <label for="name">Namn:</label><br>
+                    <input type="text" id="name" placeholder="name" required> <br>
+                    <label for="email">E-post:</label><br>
+                    <input type="text" id="email" placeholder="email" required><br>
+                    <label for="resort">Resort:</label>
+                    <input type="text" id="resort" placeholder="resort" required><br>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" placeholder="date" required><br>
+                    <textarea id="comment" name="comment" placeholder="Comments"></textarea><br>
+                    <input type="submit" value="Reserve Now">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Contact us:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=KWotO76SuXE">Instagram</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Twitter</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">TikTok</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">YouTube</a></li>
+            </ul>
+        </footer>
+    </body>
+
+</html>

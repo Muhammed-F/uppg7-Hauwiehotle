@@ -1,0 +1,338 @@
+/* Gemensam stil för alla enheter */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('imge/home.webp');
+    color: #000;
+    background-repeat: no-repeat;
+    background-size: 100% 170%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    /* Lägger till mellanrum nedanför navigationsfältet */
+}
+
+nav ul {
+    color: #ffffff;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 1.0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255);
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    row-gap: 5px;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Kartcontainerstilar */
+.map-container {
+    border: 2px solid #000;
+    /* Lägg till en svart ram runt kartan */
+    border-radius: 5px;
+    /* Avrunda hörnen på ramen */
+    overflow: hidden;
+    /* Se till att kartan är inom ramen */
+    margin: 20px;
+    /* Lägg till lite marginal runt kartan */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Lägg till en subtil skugga för visuell effekt */
+}
+
+/* Kartcontainerstilar */
+/* Stilar för text bredvid kartan */
+.info {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+
+
+#reserve {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 20px;
+    width: 50%;
+    /* Anpassa bredden för desktop-layout */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255);
+    margin: auto;
+    /* Centrera reservationen horisontellt */
+    margin-top: 20px;
+    /* Lägg till lite utrymme ovanför reservationen */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 22px);
+    /* Justera bredden för input-fält */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    /* Grön färg för submit-knappen */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    /* Full bredd för submit-knappen */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    /* Mörkare grön färg vid hover */
+}
+
+/* Header Styles */
+header {
+    height: 300px;
+    color: rgb(255, 253, 253);
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Meal Container Styles */
+.meal-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.meal {
+    background-color: #423a3a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.meal img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.meal h2 {
+    color: #fff;
+    background-color: white;
+    /* Vit bakgrundsfärg runt text */
+    padding: 10px;
+    /* Lite extra utrymme runt texten */
+    border-radius: 5px;
+    /* Rundade hörn för en mjukare look */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    width: 95%;
+    margin-top: 20px;
+    /* Lägger till mellanrum ovanför footern */
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Slideshow Styles */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* Sektionsstilar */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 15px;
+    width: 30%;
+}
+
+.section p,
+.section h1,
+.section h2,
+.section h3 {
+    color: #ffffff;
+    background-color: #333;
+}
+
+.section img {
+    width: 350px;
+    height: auto;
+}
+
+/* Responsivt gränssnitt */
+@media screen and (max-width: 600px) {
+    .meal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        height: auto;
+        padding-top: 50px;
+    }
+
+    footer {
+        position: static;
+        width: 92%;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .section img {
+        width: 180px;
+        height: auto;
+    }
+
+    /* Custom Content Layout for Mobile */
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .map {
+        width: 90%;
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .map-container,
+    .info {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    /* Reservation Styles for Mobile */
+    #reserve {
+        width: 90%;
+    }
+}
+
+/* Reservation Styles for Desktop */
+@media screen and (min-width: 601px) {
+    #reserve {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        padding: 20px;
+        width: 500px;
+        /* Bredden för desktop-layout */
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(255, 255, 255);
+        margin: auto;
+        /* Centrera reservationen horisontellt */
+        margin-top: 20px;
+        /* Lägg till lite utrymme ovanför reservationen */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: calc(100% - 22px);
+        /* Justera bredden för desktop-layout */
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Justera storlek och position för iframe på mobila enheter */
+    iframe {
+        width: 450px;
+        /* Anpassa bredden för mobila enheter */
+        height: 400px;
+        /* Anpassa höjden för mobila enheter */
+        margin: 20px auto;
+        /* Centrera iframe horisontellt och lägg till lite utrymme runt den */
+        display: block;
+        /* Säkerställ att iframe är blockelement på mobila enheter */
+    }
+}
